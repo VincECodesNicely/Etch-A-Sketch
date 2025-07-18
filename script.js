@@ -31,6 +31,10 @@ button.addEventListener("click", () => {
   if (input > 100) {
     alert("cannot do more than 100 squares");
     return;
+  } else if (!input) {
+    alert("Please put in a valid value.");
+    input = 16;
+    return createGrid(input);
   }
   createGrid(input);
 });
